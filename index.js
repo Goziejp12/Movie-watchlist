@@ -38,7 +38,8 @@ function renderHtml(data) {
                 <div class="two">
                     <p class="runtime">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    
+                    <i class="fa-solid fa-circle-plus"></i>
+                    <p class="watchlist">watchlist</p>
                 </div>
                 <p class="plot">${data.Plot}</p>
             </div>

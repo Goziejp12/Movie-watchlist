@@ -146,7 +146,7 @@ img {
 }
 
 .fa-star {
-    color: yellow;
+    color: orange;
     align-self: center;
 }
 
@@ -156,14 +156,14 @@ img {
 
 .two {
     display: flex;
-    gap: 0.3em;
+    /* gap: 0.3em; */
 }
 
 .runtime, .genre {
     margin-right: 0.5em;
 }
 
-.fa-circle-plus {
+.fa-circle-plus, .watchlist {
     align-self: center;
 }
 
