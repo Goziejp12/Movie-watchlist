@@ -61,11 +61,75 @@ button:active {
 }
 
 button:hover {
-    /* background-color: #E3E4E8; */
     color: white;
 }
 
-.camera-movie {
-    width: 500%;
-    height: 50%;
+.film-icon {
+    display: none;
+    text-align: center;
+    opacity: 0.2;
+    margin: 5em 0;
+}
+
+.film-display1 {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 3.125em auto 0;
+}
+
+hr {
+    width: 100%;
+    margin-top: 1.5em;
+}
+
+.film-display2 {
+    display: flex;
+    width: 80vw;
+    align-self: center;
+}
+
+img {
+    margin-right: 1.5em;
+    width: 15%;
+}
+
+.one {
+    display: flex;
+    gap: 0.3em;
+}
+
+.title {
+    margin-right: 0.5em;
+}
+
+.fa-star {
+    color: yellow;
+    align-self: center;
+}
+
+.rating {
+    align-self: center;
+}
+
+.two {
+    display: flex;
+    gap: 0.3em;
+}
+
+.runtime, .genre {
+    margin-right: 0.5em;
+}
+
+.fa-circle-plus {
+    align-self: center;
+}
+
+.watchlist {
+    align-self: center;
+}
+
+.three {
+    display: flex;
+    flex-direction: column;
 }
