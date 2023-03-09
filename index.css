@@ -24,6 +24,17 @@ header {
 
 h3 {
     margin: auto 0 auto auto;
+    text-decoration: none;
+}
+
+h3 a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+h3 a:hover {
+    color: blue;
 }
 
 .input-field {
@@ -153,10 +164,6 @@ img {
 }
 
 .fa-circle-plus {
-    align-self: center;
-}
-
-.watchlist {
     align-self: center;
 }
 
