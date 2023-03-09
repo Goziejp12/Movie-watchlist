@@ -160,6 +160,12 @@ img {
 
 .fa-circle-plus, .watchlist {
     align-self: center;
+    cursor: pointer;
+}
+
+.fa-circle-plus:hover {
+    box-shadow: 2px 2px 7px 2px gray;
+    border-radius: 50%;
 }
 
 .three {
