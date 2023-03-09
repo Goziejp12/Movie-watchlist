@@ -101,7 +101,7 @@ img {
     }
 }
 
-.title, 
+/* .title, 
 .fa-star, 
 .rating, 
 .runtime, 
@@ -110,7 +110,7 @@ img {
 .watchlist, 
 .post {
     justify-self: baseline;
-}
+} */
 
 .one {
     display: flex;
@@ -150,4 +150,5 @@ img {
 .three {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
