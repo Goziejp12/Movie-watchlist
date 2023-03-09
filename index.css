@@ -95,11 +95,9 @@ hr {
 }
 
 .film-display2 {
+    font-size: 0.7rem;
     display: flex;
     width: 80vw;
-    /* max-width: 480px; */
-    /* margin: 0 auto; */
-    /* align-self: center; */
 }
 
 /* media query */
