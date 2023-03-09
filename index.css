@@ -86,7 +86,8 @@ hr {
 .film-display2 {
     display: flex;
     width: 80vw;
-    align-self: center;
+    margin: 0 auto;
+    /* align-self: center; */
 }
 
 img {
@@ -150,5 +151,4 @@ img {
 .three {
     display: flex;
     flex-direction: column;
-    width: 50%;
 }
