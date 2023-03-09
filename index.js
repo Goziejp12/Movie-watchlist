@@ -41,7 +41,7 @@ function renderHtml(data) {
                     <i class="fa-solid fa-circle-plus"></i>
                     <p class="watchlist">Watchlist</p>
                 </div>
-                <p class="description">${data.Plot}</p>
+                <p class="plot">${data.Plot}</p>
             </div>
         </div>
         <hr />

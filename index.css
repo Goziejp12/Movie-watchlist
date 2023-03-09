@@ -101,6 +101,17 @@ img {
     }
 }
 
+.title, 
+.fa-star, 
+.rating, 
+.runtime, 
+.genre, 
+.fa-circle-plus, 
+.watchlist, 
+.post {
+    justify-self: baseline;
+}
+
 .one {
     display: flex;
     gap: 0.3em;
