@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    background-image: url(images/movie-banner2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 31vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    display: flex;
+    color: white;
+    width: 80vw;
+    align-self: center;
+    margin: auto 0;
+}
+
+h3 {
+    margin: auto 0 auto auto;
+}
+
+.input-field {
+    display: flex;
+    position: relative;
+    top: 2.5em;
+    align-self: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 80vw;
+}
+
+input, button {
+    border: none;
+    padding: 0.75em;
+}
+
+input {
+    outline: none;
+    border-right: 1px solid grey;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+}
+
+button {
+    font-size: 1rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 2px 2px 7px 2px black;
+}
+
+button:hover {
+    /* background-color: #E3E4E8; */
+    color: white;
+}
+
+.camera-movie {
+    width: 500%;
+    height: 50%;
+}
