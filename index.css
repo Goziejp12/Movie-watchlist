@@ -65,7 +65,7 @@ button:hover {
 }
 
 .film-icon {
-    display: none;
+    display: block;
     text-align: center;
     opacity: 0.2;
     margin: 5em 0;
@@ -80,7 +80,7 @@ button:hover {
 
 hr {
     width: 100%;
-    margin-top: 1.5em;
+    margin: 1.5em 0;
 }
 
 .film-display2 {

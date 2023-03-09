@@ -8,7 +8,7 @@ searchBtn.addEventListener('click', searchFilm)
 function searchFilm(e) {
     e.preventDefault()
     filmIcon.style.display = 'none'
-    fetch(`http://www.omdbapi.com/?apikey=e76721f7&s=${searchInput.value}&t=${searchInput.value}`)
+    fetch(`http://www.omdbapi.com/?apikey=e76721f7&s=${searchInput.value}`)
         .then(response => response.json())
         .then(data => {
             data.Search.slice(0, 5).forEach((filmSearchResults) => {
