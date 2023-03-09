@@ -91,7 +91,14 @@ hr {
 
 img {
     margin-right: 1.5em;
-    width: 15%;
+    width: 25vw;
+}
+
+/* media query */
+@media (min-width: 768px) {
+    img {
+        width: 15vw;
+    }
 }
 
 .one {
