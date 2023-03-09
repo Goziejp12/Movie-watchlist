@@ -102,14 +102,11 @@ hr {
 
 /* media query */
 
-/* @media (min-width: 765px) {
+@media (min-width: 765px) {
     .film-display2 {
-        display: flex;
-        width: 80vw;
-        margin: 0 auto;
-        align-self: center;
+        font-size: 1.3rem;
     }
-} */
+}
 
 img {
     margin-right: 1.5em;
@@ -154,7 +151,7 @@ img {
 
 .two {
     display: flex;
-    /* gap: 0.3em; */
+    gap: 0.3em;
 }
 
 .runtime, .genre {
