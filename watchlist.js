@@ -1,6 +1,11 @@
-import { filmIcon, filmDisplay1, searchInput, movieArray, searchFilm, renderHtml, handleAdd2Watchlist } from "./utils.js"
+import { renderMovie } from "./utils.js"
 
 const watchlistRender = document.querySelector('.watchlist-render')
-let getWatchlistMovies = JSON.parse(localStorage.getItem("watchlistMovies"))
+let myMovies = []
 
-watchlistRender.innerHTML = renderHtml(getWatchlistMovies)
+myMovies = JSON.parse(localStorage.getItem("watchlistMovies"))
+
+
+myMovies.forEach(films => {
+    watchlistRender.innerHTML += renderMovie(films)
+})

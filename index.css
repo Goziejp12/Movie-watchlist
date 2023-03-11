@@ -147,28 +147,25 @@ img {
     margin-right: 0.5em;
 }
 
-.fa-circle-plus, .watchlist {
+.fa-solid {
     align-self: center;
-    margin: 0;
+    font-size: 0.75rem;
+    padding: 0.35em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.fa-solid:hover {
+    background-color: #E3E4E8;
+}
+
+#addbtn {
+    display: block;
 }
 
 #removebtn {
     display: none;
     align-self: center;
-}
-
-.watchlist-btn {
-    display: flex;
-    cursor: pointer;
-    padding: 5px;
-    height: fit-content;
-    background: none;
-    border: none;
-}
-
-.watchlist-btn:hover {
-    border-radius: 10px;
-    background-color: #E3E4E8;
 }
 
 .three {

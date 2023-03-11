@@ -1,7 +1,10 @@
-let movieArray = []
+let movieResults = []
+let myFilmList = []
 const filmIcon = document.querySelector('.film-icon')
 const searchInput = document.querySelector('.search-input')
 const filmDisplay1 = document.querySelector('.film-display1')
+const addbtn = document.getElementById('addbtn')
+const removebtn = document.getElementById('removebtn')
 
 function searchFilm(e) {
     e.preventDefault()
@@ -9,18 +12,18 @@ function searchFilm(e) {
     fetch(`https://www.omdbapi.com/?apikey=e76721f7&s=${searchInput.value}`)
         .then(response => response.json())
         .then(data => {
-            movieArray = data
-            movieArray.Search.slice(0, 5).forEach((filmSearchResults) => {
+            data.Search.slice(0, 5).forEach((filmSearchResults) => {
                 fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}&plot=short`)
                     .then(response => response.json())
                     .then(data => {
-                        filmDisplay1.innerHTML += renderHtml(data)
+                        movieResults.push(data)
+                        filmDisplay1.innerHTML += renderMovie(data)
                     })
             })
         })
 }
 
-function renderHtml(data) {
+function renderMovie(data) {
     let html = ''
 
     return html = `
@@ -36,11 +39,8 @@ function renderHtml(data) {
                 <div class="two">
                     <p class="runtime">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    <button class="watchlist-btn" data-watchlist="${data.imdbID}">
-                        <i class="fa-solid fa-circle-plus" id="addbtn" data-watchlist="${data.imdbID}"></i>
-                        <i class="fa-solid fa-circle-minus" id="removebtn" data-watchlist="${data.imdbID}"></i>
-                        <p class="watchlist" data-watchlist="${data.imdbID}">Watchlist</p>
-                    </button>
+                    <i class="fa-solid fa-circle-plus" id="addbtn" data-addbtn="${data.imdbID}">watchlist</i>
+                    <i class="fa-solid fa-circle-minus" id="removebtn" data-removebtn="${data.imdbID}">watchlist</i>
                 </div>
                 <p class="plot">${data.Plot}</p>
             </div>
@@ -49,10 +49,12 @@ function renderHtml(data) {
 }
 
 function handleAdd2Watchlist(addedmovie) {
-    const added2watchlist = movieArray.Search.filter(filteredMovie => {
-        return addedmovie == filteredMovie.imdbID
+    const movies = movieResults.filter(movie => {
+        return movie.imdbID === addedmovie
     })[0]
-    return added2watchlist
+    myFilmList.unshift(movies)
+    return movies
+    
 }
 
-export{ filmIcon, filmDisplay1, searchInput, movieArray, searchFilm, renderHtml, handleAdd2Watchlist }
+export{ addbtn, removebtn, myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
