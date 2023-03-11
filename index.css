@@ -181,4 +181,5 @@ img {
     display: flex;
     flex-direction: column;
     align-self: center;
+    height: 15vh;
 }
