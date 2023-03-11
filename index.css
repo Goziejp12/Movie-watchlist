@@ -95,7 +95,6 @@ hr {
 }
 
 .film-display2 {
-    font-size: 0.85rem;
     display: flex;
     width: 80vw;
 }
@@ -110,7 +109,7 @@ hr {
 
 .poster {
     margin-right: 1.25em;
-    max-width: 20vw;
+    max-width: 25vw;
     max-height: 25vh;
     align-self: center;
     border: 1px solid;
@@ -160,10 +159,11 @@ hr {
     align-self: center;
     border-radius: 8px;
     cursor: pointer;
-    margin: 0;
+    margin: 0 0 0 auto;
 }
 
 .watchlist {
+    font-size: 0.7rem;
     margin: 0;
     align-self: center;
 }
@@ -178,6 +178,7 @@ hr {
 
 .plot {
     margin: 0;
+    font-size: 0.85rem;
     border: 1px solid red;
 }
 
