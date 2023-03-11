@@ -82,7 +82,7 @@ input {
     margin: 5em 0;
 }
 
-.film-display1 {
+.film-display1, .watchlist-render {
     display: flex;
     flex-direction: column;
     width: 80vw;

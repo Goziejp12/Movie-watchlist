@@ -57,4 +57,4 @@ function handleAdd2Watchlist(addedmovie) {
     
 }
 
-export{ addbtn, removebtn, myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
+export{ myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
