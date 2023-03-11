@@ -128,6 +128,7 @@ hr {
 }
 
 .title {
+    font-size: 0.85rem;
     margin: 0 0.5em 0 0;
 }
 
@@ -179,14 +180,12 @@ hr {
 .plot {
     margin: 0;
     font-size: 0.85rem;
-    border: 1px solid red;
 }
 
 .three {
     display: flex;
     flex-direction: column;
     align-self: center;
-    border: 1px solid;
     max-width: 55vw;
     width: 100%;
     height: fit-content;
