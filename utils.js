@@ -39,8 +39,9 @@ function renderMovie(data) {
                 <div class="two">
                     <p class="runtime">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    <i class="fa-solid fa-circle-plus" id="addbtn" data-addbtn="${data.imdbID}">watchlist</i>
-                    <i class="fa-solid fa-circle-minus" id="removebtn" data-removebtn="${data.imdbID}">watchlist</i>
+                    <i class="fa-solid fa-circle-plus" id="addbtn" data-addbtn="${data.imdbID}"></i>
+                    <i class="fa-solid fa-circle-minus" id="removebtn" data-removebtn="${data.imdbID}"></i>
+                    <p class="watchlist">Watchlist</p>
                 </div>
                 <p class="plot">${data.Plot}</p>
             </div>

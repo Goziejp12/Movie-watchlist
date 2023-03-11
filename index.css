@@ -111,6 +111,7 @@ hr {
 img {
     margin-right: 1.25em;
     width: 15vw;
+    height: 15vh;
 }
 
 /* media query */
@@ -126,49 +127,58 @@ img {
 }
 
 .title {
-    margin-right: 0.5em;
+    margin: 0 0.5em 0 0;
 }
 
 .fa-star {
     color: orange;
     align-self: center;
+    margin: 0;
 }
 
 .rating {
     align-self: center;
+    margin: 0;
 }
 
 .two {
     display: flex;
     gap: 0.3em;
+    margin: 0.5em 0;
 }
 
 .runtime, .genre {
-    margin-right: 0.5em;
+    font-size: 0.7rem;
+    align-self: center;
+    margin: 0 0.5em 0 0;
 }
 
-.fa-solid {
-    align-self: center;
+#addbtn, #removebtn {
     font-size: 0.75rem;
-    padding: 0.35em;
+    align-self: center;
     border-radius: 8px;
     cursor: pointer;
+    margin: 0;
+}
+
+.watchlist {
+    margin: 0;
+}
+
+#removebtn {
+    display: none;
 }
 
 .fa-solid:hover {
     background-color: #E3E4E8;
 }
 
-#addbtn {
-    display: block;
-}
-
-#removebtn {
-    display: none;
-    align-self: center;
+.plot {
+    margin: 0;
 }
 
 .three {
     display: flex;
     flex-direction: column;
+    align-self: center;
 }
