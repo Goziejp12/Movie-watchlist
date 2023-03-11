@@ -39,8 +39,8 @@ h3 a:hover {
 
 .input-field {
     display: flex;
-    position: relative;
-    top: 2.5em;
+    /* position: relative;
+    top: 2.5em; */
     align-self: center;
     border: 1px solid grey;
     border-radius: 10px;
