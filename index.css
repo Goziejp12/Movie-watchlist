@@ -47,7 +47,7 @@ h3 a:hover {
     width: 80vw;
 }
 
-input, button {
+input, #search-btn {
     border: none;
     padding: 0.75em;
 }
@@ -60,18 +60,18 @@ input {
     width: 100%;
 }
 
-button {
+#search-btn {
     font-size: 1rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
 }
 
-button:active {
+#search-btn:active {
     box-shadow: 2px 2px 7px 2px black;
 }
 
-button:hover {
+#search-btn:hover {
     color: white;
 }
 
@@ -160,12 +160,30 @@ img {
 
 .fa-circle-plus, .watchlist {
     align-self: center;
-    cursor: pointer;
+    margin: 0;
 }
 
-.fa-circle-plus:hover {
+#removebtn {
+    display: none;
+    align-self: center;
+}
+
+/* .fa-circle-plus:hover {
     box-shadow: 2px 2px 7px 2px gray;
     border-radius: 50%;
+} */
+.watchlist-btn {
+    display: flex;
+    cursor: pointer;
+    padding: 5px;
+    height: fit-content;
+    background: none;
+    border: none;
+}
+
+.watchlist-btn:hover {
+    border-radius: 10px;
+    background-color: #E3E4E8;
 }
 
 .three {
