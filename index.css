@@ -165,6 +165,7 @@ hr {
 
 .watchlist {
     margin: 0;
+    align-self: center;
 }
 
 #removebtn {
@@ -185,7 +186,7 @@ hr {
     flex-direction: column;
     align-self: center;
     border: 1px solid;
-    max-width: 65vw;
+    max-width: 55vw;
     width: 100%;
     height: fit-content;
 }
