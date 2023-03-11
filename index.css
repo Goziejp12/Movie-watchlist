@@ -110,7 +110,7 @@ hr {
 
 img {
     margin-right: 1.25em;
-    width: 35vw;
+    width: 15vw;
 }
 
 /* media query */
@@ -119,17 +119,6 @@ img {
         width: 15vw;
     }
 }
-
-/* .title, 
-.fa-star, 
-.rating, 
-.runtime, 
-.genre, 
-.fa-circle-plus, 
-.watchlist, 
-.post {
-    justify-self: baseline;
-} */
 
 .one {
     display: flex;
@@ -168,10 +157,6 @@ img {
     align-self: center;
 }
 
-/* .fa-circle-plus:hover {
-    box-shadow: 2px 2px 7px 2px gray;
-    border-radius: 50%;
-} */
 .watchlist-btn {
     display: flex;
     cursor: pointer;
