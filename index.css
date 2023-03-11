@@ -108,16 +108,17 @@ hr {
     }
 }
 
-img {
+.poster {
     margin-right: 1.25em;
-    width: 15vw;
-    height: 15vh;
+    width: 20vw;
+    align-self: center;
+    border: 1px solid;
 }
 
 /* media query */
 @media (min-width: 768px) {
-    img {
-        width: 15vw;
+    .poster {
+        max-width: 15vw;
     }
 }
 
@@ -175,12 +176,14 @@ img {
 
 .plot {
     margin: 0;
+    border: 1px solid red;
 }
 
 .three {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    height: fit-content;
+    /* align-self: center; */
     border: 1px solid;
+    max-height: 18vh;
+    /* height: fit-content; */
 }

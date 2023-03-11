@@ -28,7 +28,7 @@ function renderMovie(data) {
 
     return html = `
         <div class="film-display2">
-            <img src="${data.Poster}">
+            <img src="${data.Poster}" class="poster">
                         
             <div class="three">
                 <div class="one">
