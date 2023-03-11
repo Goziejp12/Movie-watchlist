@@ -110,7 +110,8 @@ hr {
 
 .poster {
     margin-right: 1.25em;
-    width: 20vw;
+    max-width: 20vw;
+    max-height: 25vh;
     align-self: center;
     border: 1px solid;
 }
@@ -182,8 +183,9 @@ hr {
 .three {
     display: flex;
     flex-direction: column;
-    /* align-self: center; */
+    align-self: center;
     border: 1px solid;
-    max-height: 18vh;
-    /* height: fit-content; */
+    max-width: 65vw;
+    width: 100%;
+    height: fit-content;
 }
