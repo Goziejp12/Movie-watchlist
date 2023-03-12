@@ -11,7 +11,7 @@ function searchFilm(e) {
     fetch(`https://www.omdbapi.com/?apikey=e76721f7&s=${searchInput.value}`)
         .then(response => response.json())
         .then(data => {
-            data.Search.slice(0, 5).forEach((filmSearchResults) => {
+            data.Search.forEach((filmSearchResults) => {
                 fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}&plot=short`)
                     .then(response => response.json())
                     .then(data => {
