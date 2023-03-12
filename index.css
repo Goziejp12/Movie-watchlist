@@ -191,10 +191,12 @@ hr {
 
 .btn.fa-circle-minus {
     display: none;
+    color: red;
 }
 
 .btn.fa-circle-plus {
     display: block;
+    color: green;
 }
 
 .btn:hover{
