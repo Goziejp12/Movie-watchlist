@@ -38,8 +38,8 @@ function renderMovie(data) {
                 <div class="two">
                     <p class="runtime">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    <i class="fa-solid fa-circle-plus" id="addbtn" data-addbtn="${data.imdbID}"></i>
-                    <i class="fa-solid fa-circle-minus" id="removebtn" data-removebtn="${data.imdbID}"></i>
+                    <i class="fa-solid fa-circle-plus btn"  data-addbtn="${data.imdbID}"></i>
+                    <i class="fa-solid fa-circle-minus btn" data-removebtn="${data.imdbID}"></i>
                     <p class="watchlist">Watchlist</p>
                 </div>
                 <p class="plot">${data.Plot}</p>
@@ -48,12 +48,19 @@ function renderMovie(data) {
         <hr />`
 }
 
+let minusBtn = ''
+
 function handleAdd2Watchlist(addedmovie) {
     const movies = movieResults.filter(movie => {
         return movie.imdbID === addedmovie
     })[0]
     myFilmList.unshift(movies)
-    return movies
+    // console.log(movies)
+        document.querySelector('.btn.fa-circle-minus').style.display = 'block'
+        document.querySelector('.btn.fa-circle-plus').style.display = 'none'
+    
+    
+    // movies.Response = !movies.Response
 }
 
 export { myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }

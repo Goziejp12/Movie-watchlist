@@ -5,11 +5,22 @@ body {
 }
 
 header {
-    background-image: url(images/movie-banner2.jpeg);
+    background-image: url('https://cdn.pixabay.com/photo/2016/09/14/08/18/film-1668918_960_720.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 31vh;
     width: 100vw;
+}
+
+#notification {
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    width: 15px;
+    height: 20px;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 5px;
 }
 
 header, 
@@ -44,8 +55,7 @@ header,
 .rating, 
 .runtime, 
 .genre, 
-#addbtn, 
-#removebtn, 
+.btn, 
 .three {
     align-self: center;
 }
@@ -166,7 +176,7 @@ hr {
     margin: 0 0.5em 0 0;
 }
 
-#addbtn, #removebtn {
+.btn {
     font-size: 0.85rem;
     border-radius: 8px;
     cursor: pointer;
@@ -179,15 +189,15 @@ hr {
     align-self: center;
 }
 
-#addbtn {
-    display: block;
-}
-
-#removebtn {
+.btn.fa-circle-minus {
     display: none;
 }
 
-#addbtn:hover, #removebtn:hover {
+.btn.fa-circle-plus {
+    display: block;
+}
+
+.btn:hover{
     background-color: #E3E4E8;
 }
 
@@ -218,8 +228,7 @@ hr {
     .one,
     .plot,
     .watchlist,
-    #addbtn,
-    #removebtn {
+    .btn {
         font-size: 1.5rem;
     }
 }

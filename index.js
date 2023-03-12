@@ -1,5 +1,7 @@
 import { myFilmList, searchFilm, handleAdd2Watchlist } from "./utils.js"
 
+let movieLists = JSON.parse(localStorage.getItem("watchlistMovies"))
+
 const searchBtn = document.getElementById('search-btn')
 
 searchBtn.addEventListener('click', searchFilm)
@@ -10,3 +12,5 @@ document.addEventListener('click', e => {
             localStorage.setItem("watchlistMovies", JSON.stringify(myFilmList))
         }
 })
+
+document.getElementById('notification').textContent = `${movieLists.length}`
