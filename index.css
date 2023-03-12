@@ -45,6 +45,13 @@ h3 a:hover {
     border: 1px solid grey;
     border-radius: 10px;
     width: 80vw;
+    background-color: white;
+}
+
+.fa-magnifying-glass {
+    color: #ADAFB8;
+    margin-left: 0.5em;
+    align-self: center;
 }
 
 input, #search-btn {
@@ -64,15 +71,17 @@ input {
     font-size: 1rem;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    background-color: #E3E4E8;
     cursor: pointer;
 }
 
 #search-btn:active {
     box-shadow: 2px 2px 7px 2px black;
+    background-color: #C8C9D0;
 }
 
 #search-btn:hover {
-    color: white;
+    background-color: #C8C9D0;
 }
 
 .film-icon {
@@ -167,6 +176,10 @@ hr {
     font-size: 0.7rem;
     margin: 0;
     align-self: center;
+}
+
+#addbtn {
+    display: block;
 }
 
 #removebtn {

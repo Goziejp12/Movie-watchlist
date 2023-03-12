@@ -3,8 +3,7 @@ let myFilmList = []
 const filmIcon = document.querySelector('.film-icon')
 const searchInput = document.querySelector('.search-input')
 const filmDisplay1 = document.querySelector('.film-display1')
-const addbtn = document.getElementById('addbtn')
-const removebtn = document.getElementById('removebtn')
+
 
 function searchFilm(e) {
     e.preventDefault()
@@ -55,7 +54,6 @@ function handleAdd2Watchlist(addedmovie) {
     })[0]
     myFilmList.unshift(movies)
     return movies
-    
 }
 
 export{ myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
