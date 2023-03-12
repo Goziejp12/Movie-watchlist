@@ -130,26 +130,11 @@ hr {
     width: 80vw;
 }
 
-/* media query */
-
-@media (min-width: 765px) {
-    .film-display2 {
-        font-size: 1.3rem;
-    }
-}
-
 .poster {
     margin-right: 1.25em;
     max-width: 25vw;
     max-height: 25vh;
     border: 1px solid;
-}
-
-/* media query */
-@media (min-width: 768px) {
-    .poster {
-        max-width: 15vw;
-    }
 }
 
 .one {
@@ -202,17 +187,39 @@ hr {
     display: none;
 }
 
-.fa-solid:hover {
+#addbtn:hover, #removebtn:hover {
     background-color: #E3E4E8;
 }
 
 .plot {
     font-size: 0.85rem;
     margin: 0;
+    color: #7A7C85;
 }
 
 .three {
     max-width: 55vw;
     width: 100%;
     height: fit-content;
+}
+
+/* media qurey */
+
+@media (min-width: 765px) {
+    .runtime,
+    .genre {
+        font-size: 1rem;
+    }
+
+    .poster {
+        max-width: 25vw;
+    }
+
+    .one,
+    .plot,
+    .watchlist,
+    #addbtn,
+    #removebtn {
+        font-size: 1.5rem;
+    }
 }
