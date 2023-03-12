@@ -1,5 +1,7 @@
 import { myFilmList, searchFilm, handleAdd2Watchlist } from "./utils.js"
 
+const searchBtn = document.getElementById('search-btn')
+
 searchBtn.addEventListener('click', searchFilm)
 
 document.addEventListener('click', e => {

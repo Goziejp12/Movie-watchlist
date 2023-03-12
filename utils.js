@@ -56,4 +56,4 @@ function handleAdd2Watchlist(addedmovie) {
     return movies
 }
 
-export{ myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
+export { myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
