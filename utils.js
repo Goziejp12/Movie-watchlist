@@ -12,15 +12,29 @@ function searchFilm(e) {
         .then(response => response.json())
         .then(data => {
             filmDisplay1.innerHTML = ``
-            data.Search.forEach((filmSearchResults) => {
-                fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        movieResults.push(data)
-                        render(data)
-                    })
-            })
+            if(data.Response === 'False') {
+                filmDisplay1.innerHTML = noMovieFoundHtml(data)
+            }
+            else {
+                data.Search.forEach((filmSearchResults) => {
+                    fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            movieResults.push(data)
+                            render(data)
+                        })
+                })
+            }
         })
+}
+
+function noMovieFoundHtml(data) {
+    let html = `<div class="no-movie-found">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>${data.Error}</h2>
+                </div>
+                `
+    return html
 }
 
 function render(data) {

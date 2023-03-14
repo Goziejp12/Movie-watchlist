@@ -116,11 +116,15 @@ input {
     background-color: #C8C9D0;
 }
 
-.film-icon {
+.film-icon, .no-movie-found {
     display: block;
     text-align: center;
     opacity: 0.2;
     margin: 5em 0;
+}
+
+.fa-triangle-exclamation {
+    font-size: 5rem;
 }
 
 .film-display1, .watchlist-render {
