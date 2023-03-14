@@ -1,6 +1,5 @@
 let movieResults = []
 let myFilmList = []
-let myMovies = []
 const filmIcon = document.querySelector('.film-icon')
 const searchInput = document.querySelector('.search-input')
 const filmDisplay1 = document.querySelector('.film-display1')
@@ -12,6 +11,7 @@ function searchFilm(e) {
     fetch(`https://www.omdbapi.com/?apikey=e76721f7&s=${searchInput.value}`)
         .then(response => response.json())
         .then(data => {
+            filmDisplay1.innerHTML = ``
             data.Search.forEach((filmSearchResults) => {
                 fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}`)
                     .then(response => response.json())
@@ -29,7 +29,7 @@ function render(data) {
 
 
 function movieHtml(data) {
-    let html = ''
+    let html = ``
 
     return html = `
         <div class="film-display2">
