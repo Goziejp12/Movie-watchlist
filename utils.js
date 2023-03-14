@@ -1,5 +1,6 @@
 let movieResults = []
 let myFilmList = []
+let myMovies = []
 const filmIcon = document.querySelector('.film-icon')
 const searchInput = document.querySelector('.search-input')
 const filmDisplay1 = document.querySelector('.film-display1')
@@ -12,17 +13,22 @@ function searchFilm(e) {
         .then(response => response.json())
         .then(data => {
             data.Search.forEach((filmSearchResults) => {
-                fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}&plot=short`)
+                fetch(`https://www.omdbapi.com/?apikey=e76721f7&t=${filmSearchResults.Title}`)
                     .then(response => response.json())
                     .then(data => {
                         movieResults.push(data)
-                        filmDisplay1.innerHTML += renderMovie(data)
+                        render(data)
                     })
             })
         })
 }
 
-function renderMovie(data) {
+function render(data) {
+    filmDisplay1.innerHTML += movieHtml(data)
+}
+
+
+function movieHtml(data) {
     let html = ''
 
     return html = `
@@ -38,29 +44,24 @@ function renderMovie(data) {
                 <div class="two">
                     <p class="runtime">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    <i class="fa-solid fa-circle-plus btn"  data-addbtn="${data.imdbID}"></i>
-                    <i class="fa-solid fa-circle-minus btn" data-removebtn="${data.imdbID}"></i>
+                    <i class="fa-solid fa-circle-plus plus-${data.imdbID} btn"  data-addbtn="${data.imdbID}"></i>
+                    <i class="fa-solid fa-circle-minus minus-${data.imdbID} btn"></i>
                     <p class="watchlist">Watchlist</p>
                 </div>
                 <p class="plot">${data.Plot}</p>
             </div>
         </div>
-        <hr />`
+        <hr/>`
 }
 
-let minusBtn = ''
-
-function handleAdd2Watchlist(addedmovie) {
+function handleAddToWatchlist(addedmovie) {
     const movies = movieResults.filter(movie => {
         return movie.imdbID === addedmovie
     })[0]
     myFilmList.unshift(movies)
-    // console.log(movies)
-        document.querySelector('.btn.fa-circle-minus').style.display = 'block'
-        document.querySelector('.btn.fa-circle-plus').style.display = 'none'
-    
-    
-    // movies.Response = !movies.Response
+    localStorage.setItem("storedMovies", JSON.stringify(myFilmList))
+    document.querySelector(`.minus-${movies.imdbID}`).style.display = 'block'
+    document.querySelector(`.plus-${movies.imdbID}`).style.display = 'none'
 }
 
-export { myFilmList, searchFilm, renderMovie, handleAdd2Watchlist }
+export { searchFilm, handleAddToWatchlist }
