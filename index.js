@@ -12,5 +12,3 @@ document.addEventListener('click', e => {
             window.location.href = 'watchlist.html'
         }
 })
-
-// document.getElementById('notification').textContent = `${movieLists.length}`
