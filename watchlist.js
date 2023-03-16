@@ -12,9 +12,6 @@ document.addEventListener('click', e => {
 })
 
 function handleRemoveClick(removebtn) {
-    const removeFilms = myMovies.filter(films => {
-        return films.imdbID === removebtn
-    })[0]
     const filmIndex = myMovies.findIndex(data => {
         return data.imdbID === removebtn
     })

@@ -1,7 +1,5 @@
 import { searchFilm, handleAddToWatchlist } from "./utils.js"
 
-JSON.parse(localStorage.getItem("storedMovies"))
-
 document.getElementById('search-btn').addEventListener('click', searchFilm)
 
 document.addEventListener('click', e => {
